@@ -21,7 +21,8 @@ namespace CSE210_02.Classes
             {
                 for (int y = 1; y <= 10; y++)
                 {
-                    deckLiteral.Add(y + " " + suite[x]);
+                    string line = y + " " + suite[x];
+                    deckLiteral.Add(line);
                 }
                 deckLiteral.Add("J " + suite[x]);
                 deckLiteral.Add("Q " + suite[x]);
