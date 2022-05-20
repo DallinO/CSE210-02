@@ -10,8 +10,8 @@ namespace CSE210_02
             string answer = Console.ReadLine();
             if (answer == "Y")
             {
-                Game.StartGame();
-                
+                Game newGame = new Game();
+                newGame.StartGame();
             }
 
         }
