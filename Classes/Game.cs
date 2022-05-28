@@ -6,42 +6,34 @@ namespace CSE210_02.Classes
 
     public class Game
     {
+        Deck deck = new Deck();
+        public Dictionary<string, int> newDeck;
+        public Game()
+        {
+            newDeck = deck.GetDeck();
+        }
+        public Dictionary<string, int> GiveDeck()
+        {
+            return(newDeck);
+        }
         public void StartGame()
         {
-            Deck newDeck = new Deck();
-            List<string> deck = newDeck.CreateDeck();
-            List<int> location = newDeck.CreateHierarchy();
             int points = 300;
 
-            for (int a = 0; a < 52; a++)
+            /* foreach (KeyValuePair<string, int> key in newDeck)
             {
-                Console.WriteLine(deck[a]);
-                Console.WriteLine(location[a]);
+                Console.WriteLine($"{newDeck.Key}, {newDeck.Value}");
             }
-
-            Random rnd = new Random();
-
+            
             while (points > 0)
             {
-                int cardPosition = rnd.Next(deck.Count); 
-                string startingCard = deck[cardPosition];
-                int startingCardValue = location[cardPosition];
 
-                Console.WriteLine($"The Card is: {startingCard}");
-                deck.Remove(deck[cardPosition]);
-                location.Remove(location[cardPosition]);
-
-                cardPosition = rnd.Next(deck.Count);
-                string nextCard = deck[cardPosition];
-                int nextCardValue = location[cardPosition];
+                Card card = new Card();
+                card = Card.GetCard();
+                Console.WriteLine($"The Card is: {firstCard}");
 
                 Console.Write("Higher or Lower (H/L)? ");
-                string guess = Console.ReadLine();
-
                 Console.WriteLine($"The next card is: {nextCard}");
-                deck.Remove(deck[cardPosition]);
-                location.Remove(location[cardPosition]);
-
                 Console.WriteLine(startingCardValue);
                 Console.WriteLine(nextCardValue);
 
@@ -86,7 +78,7 @@ namespace CSE210_02.Classes
                     Console.WriteLine("Game Over");
                     Environment.Exit(0);
                 }
-            }
+            }*/
         }
    }
 }
