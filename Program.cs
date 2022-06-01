@@ -13,7 +13,6 @@ namespace CSE210_02
                 Game game = new Game();
                 game.StartGame();
             }
-
         }
     }    
 }

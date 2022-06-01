@@ -19,7 +19,7 @@ namespace CSE210_02.Classes
             faceCard.Add("J");
             faceCard.Add("Q");
             faceCard.Add("K");
-            faceCard.Add("J");
+            faceCard.Add("A");
 
             for (int x = 0; x < 4; x++)
             {
@@ -35,10 +35,11 @@ namespace CSE210_02.Classes
                     hashList.Add(deckLiteral);
 
                 }
+                yankee = 10;
                 for (zulu = 0; zulu < 4; zulu++)
                 {
-                    deckLiteral = (faceCard[zulu] + suite[x]);
-                    yankee += yankee;
+                    deckLiteral = (faceCard[zulu] + " " + suite[x]);
+                    yankee = yankee + 1;
                     int deckNumerical = yankee;
                     deck.Add(deckLiteral, deckNumerical);
                     hashList.Add(deckLiteral);
