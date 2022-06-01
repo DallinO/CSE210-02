@@ -7,12 +7,19 @@ namespace CSE210_02.Classes
     {
         int index;
         Random rnd = new Random();
-        // Dictionary<string, int> card;
-        public Dictionary<string, int> NewCard(Deck deck)
+        Dictionary<string, int> card;
+        public Card(Game game)
         {
-            deck.suite.Add("Test");
+            int x = rnd.Next(game.hashList.Count);
+            card = new Dictionary<string, int>(){
+                {game.hashList[x], game.newDeck[game.hashList[x]]}
+                };
+            game.hashList.Remove(game.hashList[x]);
+        }
 
-            return(deck.suite);
+        public Dictionary<string, int> GetCard()
+        {
+            return(card);
         }
     }
 }

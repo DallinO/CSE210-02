@@ -5,11 +5,11 @@ namespace CSE210_02.Classes
 {
     public class Deck
     {
-        public List<string> suite;
-        Dictionary<string, int> deck = new Dictionary<string, int>();
+        public List<string> hashList = new List<string>();
+        public Dictionary<string, int> deck = new Dictionary<string, int>();
         public Deck()
         {
-            suite = new List<string>();
+            List<string> suite = new List<string>();
             suite.Add("Heart");
             suite.Add("Spade");
             suite.Add("Diamond");
@@ -32,6 +32,7 @@ namespace CSE210_02.Classes
                     deckLiteral = (yankee.ToString() + " " + suite[x]);
                     int deckNumerical = yankee;
                     deck.Add(deckLiteral, deckNumerical);
+                    hashList.Add(deckLiteral);
 
                 }
                 for (zulu = 0; zulu < 4; zulu++)
@@ -40,6 +41,7 @@ namespace CSE210_02.Classes
                     yankee += yankee;
                     int deckNumerical = yankee;
                     deck.Add(deckLiteral, deckNumerical);
+                    hashList.Add(deckLiteral);
 
                 }
             }
@@ -48,6 +50,11 @@ namespace CSE210_02.Classes
         public Dictionary<string, int> GetDeck()
         {
             return(deck);
+        }
+
+        public List<string> GetHash()
+        {
+            return(hashList);
         }
     }
 }
