@@ -3,10 +3,14 @@ using System.Collections.Generic;
 
 namespace CSE210_02.Classes
 {
+    // Creates a new deck.
     public class Deck
     {
+        // Variables.
         public List<string> hashList = new List<string>();
         public Dictionary<string, int> deck = new Dictionary<string, int>();
+        
+        // Creates Deck object.
         public Deck()
         {
             List<string> suite = new List<string>();
@@ -48,11 +52,13 @@ namespace CSE210_02.Classes
             }
         }
 
+        // Returns deck.
         public Dictionary<string, int> GetDeck()
         {
             return(deck);
         }
 
+        // Returns deck hash list.
         public List<string> GetHash()
         {
             return(hashList);
