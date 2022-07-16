@@ -3,17 +3,22 @@ using System.Collections.Generic;
 
 namespace CSE210_02.Classes
 {
-
+    
+    // The Game class facilitates the game.
     public class Game
     {
         public Dictionary<string, int> newDeck;
         public List<string> hashList;
         Deck deck = new Deck();
+        
+        // Creates new game object
         public Game()
         {
             newDeck = deck.GetDeck();
             hashList = deck.GetHash();
         }
+        
+        // Directs the game.
         public void StartGame()
         {
             bool win = false;
@@ -54,9 +59,7 @@ namespace CSE210_02.Classes
                     Environment.Exit(0);
                 }
                 Console.WriteLine("**************************");
-
-
             }
         }
-   }
+    }
 }
