@@ -1,6 +1,5 @@
-#
-The first player to get three in a row wins! Obviously requires two
-people so you must have friends in order to play.
+# Hilo
+Score points by guessing whether the next card will be higher or lower!
 
 ---
 ## Getting Started
@@ -21,11 +20,12 @@ arrow or "start debugging" button.
 The project files and folders are organized as follows:
 ```
 root                    (project root folder)
-+-- Game                (source code folder)
-+-- .gitignore          (honestly not sure what this is)
++-- .vscode             
++-- Classes             (contains class files)
 +-- Program.cs          (program entry point)    
 +-- README.md           (general info)
-+-- Unit04.csproj       (dotnet project file)
++-- CSE210-02.csproj    (dotnet project file)
++-- obj
 ```
 
 ## Required Technologies
